@@ -1,4 +1,4 @@
-1. # Troubleshooting "ImagePullBackOff" Error in Kubernetes
+# 1. Troubleshooting "ImagePullBackOff" Error in Kubernetes
 
 When you see an **"ImagePullBackOff"** error in Kubernetes, it means that your cluster is trying to pull a container image from a repository (like Docker Hub) but is failing. Kubernetes will **back off** (wait and retry) before trying again.
 
@@ -39,7 +39,7 @@ kubectl get events -n <namespace>
 ```
 
 
-2. # Fixing "CreateContainerConfigError" in Kubernetes
+# 2. Fixing "CreateContainerConfigError" in Kubernetes
 
 ## What is "CreateContainerConfigError"?
 
@@ -131,7 +131,7 @@ kubectl describe pod <pod-name>
 kubectl logs <pod-name>
 ```
 
-3. # CreateContainerError - What It Means and How to Fix It
+ # 3.CreateContainerError - What It Means and How to Fix It
 
 ## What is CreateContainerError?
 `CreateContainerError` is an error that happens when a container cannot be created in a Kubernetes or Docker environment. This means something is preventing the container from starting.
@@ -175,7 +175,7 @@ kubectl logs <pod-name>
 4. Look at events in the cluster with `kubectl get events`.
 
 
-# RunContainerError - What It Means and How to Fix It
+# 4.RunContainerError - What It Means and How to Fix It
 
 ## What is RunContainerError?
 `RunContainerError` is an error that happens when a container is created but cannot start running. This means something is preventing the container from executing properly.
@@ -219,7 +219,7 @@ kubectl logs <pod-name>
 4. Look at events in the cluster with `kubectl get events`.
 
 
-5. # CrashLoopBackOff - What It Means and How to Fix It
+# 5.CrashLoopBackOff - What It Means and How to Fix It
 
 ## What is CrashLoopBackOff?
 `CrashLoopBackOff` is an error that happens when a container keeps crashing and Kubernetes is waiting before restarting it again. This means something inside the container is failing repeatedly.
@@ -276,7 +276,7 @@ kubectl logs <pod-name>
 5. If needed, increase restart delays using `restartPolicy` settings.
 
 
-6. # OOMKilled - What It Means and How to Fix It
+# 6.OOMKilled - What It Means and How to Fix It
 
 ## What is OOMKilled?
 `OOMKilled` is an error that happens when a container is using too much memory, and the system forcefully stops (kills) it. This means the container exceeded its memory limit.
@@ -326,7 +326,7 @@ kubectl logs <pod-name>
 5. Adjust memory limits in the deployment YAML.
 
 
-7. # Node Disk Pressure - What It Means and How to Fix It
+# 7.Node Disk Pressure - What It Means and How to Fix It
 
 ## What is Node Disk Pressure?
 `Node Disk Pressure` is an error that happens when a Kubernetes node is running low on disk space. This means the node cannot schedule new pods or may evict existing ones to free up space.
@@ -376,7 +376,7 @@ kubectl logs <pod-name>
 5. Restart the node if necessary to free up space.
 
 
-8. # Node Not Ready - What It Means and How to Fix It
+# 8.Node Not Ready - What It Means and How to Fix It
 
 ## What is Node Not Ready?
 `Node Not Ready` is an error that happens when a Kubernetes node is unable to run workloads. This means the node is facing issues and cannot schedule new pods.
